@@ -10,12 +10,19 @@ func init() {
 
 // Main thread loop, executes functions.
 func Main() {
-	for f := range mainfunc {
-		f()
+loop:
+	for {
+		select {
+		case f := <-mainfunc:
+			f()
+		case <-quit:
+			break loop
+		}
 	}
 }
 
 var mainfunc = make(chan func())
+var quit = make(chan bool)
 
 // Run function in mainthread.
 func Do(f func()) {
@@ -25,4 +32,8 @@ func Do(f func()) {
 		done <- true
 	}
 	<-done
+}
+
+func Quit() {
+	quit <- true
 }
