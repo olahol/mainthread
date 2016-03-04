@@ -42,7 +42,7 @@ func main() {
 
 ## [Documentation](godoc)
 
-[godoc]: https://godoc.org/github.com/olahol/go-imageupload
-[godoc-img]: https://godoc.org/github.com/olahol/go-imageupload?status.svg
+[godoc]: https://godoc.org/github.com/olahol/mainthread
+[godoc-img]: https://godoc.org/github.com/olahol/mainthread?status.svg
 [cox-code]: https://groups.google.com/forum/#!msg/golang-nuts/IiWZ2hUuLDA/SNKYYZBelsYJ
 [lockosthread]: https://github.com/golang/go/wiki/LockOSThread
